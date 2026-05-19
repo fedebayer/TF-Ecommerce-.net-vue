@@ -1,0 +1,129 @@
+﻿.project-proposal-landing {
+    width: 575px;
+}
+
+.project-proposal-landing {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding-bottom: 3rem;
+}
+
+    .project-proposal-landing .title {
+        text-align: center;
+        font-size: 1.5rem;
+        position: relative;
+        width: 25rem;
+        margin-bottom: 2rem;
+        padding-bottom: 4rem;
+        font-weight: 700;
+    }
+
+        .project-proposal-landing .title::after {
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: #f9414a;
+            position: absolute;
+            border-radius: 1.5px;
+            left: 0;
+            top: 100px;
+        }
+
+    .project-proposal-landing .project-name-input-item a {
+        border: none;
+        border-bottom: 1px solid #000;
+        background-color: transparent;
+        outline: none;
+        width: 11.5rem;
+        text-decoration: none;
+    }
+
+
+    .project-proposal-landing .check-terms-item li {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #4d4c4c;
+        padding-left: 5px;
+        margin-left: -10px;
+        letter-spacing: 0.1rem;
+    }
+
+        .project-proposal-landing .check-terms-item li p {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #4d4c4c;
+        }
+
+    .project-proposal-landing .check-terms-item .read-terms {
+        font-size: 0.85rem;
+        text-align: center;
+        letter-spacing: 1.8px;
+        font-weight: 600;
+        color: #4d4c4c;
+        padding-bottom: 2rem;
+    }
+
+    .project-proposal-landing .checkbox {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.15rem;
+    }
+
+        .project-proposal-landing .checkbox .checkbox-item {
+            padding: 1.3rem 0;
+        }
+
+    .project-proposal-landing .checkbox-item .inputcheckbox {
+        margin-right: 3px;
+    }
+
+    .project-proposal-landing .checkbox a {
+        color: #f9414a;
+        text-decoration: underline;
+    }
+
+    .project-proposal-landing .checkbox-item .submitbutton {
+        background-color: #f9414a;
+        border: none;
+        color: #fff;
+        padding: 0.5rem 11.5rem;
+        letter-spacing: 0.1rem;
+        font-size: 0.9rem;
+        outline: none;
+        text-decoration: none;
+    }
+
+@media screen and (max-width: 575px) {
+
+    .project-proposal-landing .title {
+        width: 18rem;
+    }
+
+    .project-proposal-landing .checkbox-item .submitbutton {
+        padding: 0.5rem 5rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+
+    .project-proposal-landing .container,
+    .project-proposal-landing .container-md,
+    .project-proposal-landing .container-sm {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .project-proposal-landing .title {
+        width: 460px;
+    }
+
+
+    .project-proposal-landing .container,
+    .project-proposal-landing .container-md,
+    .project-proposal-landing .container-sm {
+        max-width: 500px;
+    }
+}
