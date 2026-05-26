@@ -1,0 +1,547 @@
+﻿:root {
+    --color: #F9414A;
+    font-family: 'Noto Sans TC', 'Helvetica Neue', 'Heiti TC', 'Microsoft JhengHei',Arial, Helvetica, sans-serif;
+}
+
+#sidebar {
+    width: 15rem;
+    position: fixed;
+    top: 0;
+    left: -25rem;
+    height: 100vh;
+    z-index: 1030;
+    background: #F6F6F6;
+    color: #fff;
+    transition: all 0.6s;
+}
+
+    #sidebar.active {
+        left: 0;
+    }
+
+
+/* 控制黑色遮罩 */
+/*.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1025;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+    .overlay.active {
+        display: block;
+        opacity: 1;
+        z-index: 1025;
+    }*/
+
+
+/* 自己調的 */
+
+
+#sidebar .sidebar-header h2 {
+    /*    color: var(--color);*/
+    margin-top: 0.7rem;
+    margin-left: 0.6rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+    #sidebar .sidebar-header h2 a {
+        color: var(--color);
+    }
+
+#sidebar .sidebar-header a {
+    text-decoration: none;
+    color:#000;
+}
+
+#dismiss {
+    position: absolute;
+    left: 12.5rem;
+    top: 1.3rem;
+    display: none;
+    z-index: 1501;
+    cursor: pointer
+}
+
+    #dismiss i {
+        color: black;
+        font-size: 1.5rem;
+    }
+
+
+#sidebar .sidebar-header li {
+    color: #000;
+    margin-left: 1.7rem;
+    margin-top: 3.3rem;
+}
+
+
+
+#sidebar .sidebar-header {
+    padding: 0.7rem 0 0 0.7rem;
+    display: flex;
+    list-style: none;
+}
+
+
+.sidebar-item{
+    cursor: pointer;
+} 
+
+#sidebar .bullhorn {
+    position: absolute;
+    transition: .3s;
+    cursor: pointer;
+    /* position: relative; */
+    top: 25px;
+    right: 20px;
+    color: #000;
+    transition: .3s;
+}
+
+    #sidebar .bullhorn:hover i {
+        color: var(--color);
+    }
+
+    #sidebar .bullhorn:hover p {
+        color: var(--color);
+    }
+
+    #sidebar .sidebar-item i:hover {
+        color: var(--color);
+    }
+
+    .sidebar-header #message-phone{
+        color:#000;
+        position:relative;
+        right:-2rem;
+    }
+
+    .sidebar-header #message-phone:hover{
+        color:#F9414A;
+    }
+
+
+#sidebar .social-media{
+    padding-bottom: 7rem;
+    padding-left: 2rem;
+}
+
+#sidebar .social-media-item {
+    color: #000;
+    font-size: 1.5rem;
+    transition: .3s;
+}
+
+#sidebar .social-media-item i{
+    color: #000;
+}
+
+    #sidebar .social-media-item:hover i{
+        color: #F9414A;
+    }
+/*手機input*/
+#sidebar .search-input input {
+    display: none;
+    border: none;
+    margin: 1rem 0 1rem 0.5rem;
+    outline: none;
+    background-color: transparent;
+/*    border-bottom: 1px solid #aaa;*/
+}
+
+#sidebar .list-item a {
+    font-size: 1.1rem;
+    color: #000;
+    transition: .6s;
+}
+
+#sidebar .list-item {
+    padding: 1rem;
+    margin-left: 1rem;
+/*    text-decoration: underline;*/
+}
+
+    #sidebar .list-item a {
+        text-decoration: none;
+/*        color: #63504e;*/
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+        #sidebar .list-item a:hover {
+/*            color: var(--color);*/
+        }
+
+/*手機鈴噹*/
+.message-phone{
+    position:relative;
+    top:3.2rem;
+    color:#000;
+}
+
+
+
+
+.hamburger {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+    .hamburger i {
+        font-size: 1.7rem;
+        color: var(--color);
+        padding: 0 0 0 1rem;
+    }
+    .hamburger .fa-bars {
+        
+        padding: 0rem;
+    }
+   
+
+    .hamburger #sidebarCollapse {
+        border: transparent;
+        background-color: transparent;
+    }
+
+
+    .hamburger .dropdown {
+        list-style: none;
+    }
+
+        .hamburger .dropdown img {
+            border-radius: 50%;
+            margin-bottom: 0.9rem;
+        }
+
+        .hamburger .dropdown .dropdown-menu {
+            min-width: 3rem;
+            left: -3rem;
+        }
+
+.hamburger {
+    font-size: 2rem;
+}
+
+    .hamburger .title {
+        color: #000;
+        margin-top: 0rem;
+       /* margin-left: 3.8rem;*/
+        text-align: center;
+    }
+
+        .hamburger .title h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.3rem;
+            margin: 0;
+/*            position: relative;*/
+/*            z-index: -1;*/
+        }
+
+            .hamburger .title h1 a {
+                /*                color: var(--color);
+    margin-right: 0;
+    text-decoration: none;*/
+    position:relative;
+}
+
+    .hamburger .dropdown-toggle::after {
+        border-top: .27rem solid #aaa;
+        border-right: .27rem solid transparent;
+        border-left: .27rem solid transparent;
+        margin-bottom: .3rem;
+        margin-left: .1rem;
+    }
+
+
+.pcmode-navbar {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+/*    .hamburger .nav-link {
+        padding: .5rem .5rem;
+    }*/
+}
+
+@media screen and (min-width: 577px) {
+    .hamburger .title {
+        margin-left: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hamburger {
+        display: none;
+    }
+
+    .overlay.active{
+        display:none;
+    }
+    #sidebar {
+        display: none;
+    }
+    .pcmode-navbar {
+        display: block;
+    }
+
+}
+
+
+
+.hamburger .fa-shopping-cart {
+    font-size: 1.2rem;
+    color: #7f7f7f;
+    cursor: pointer;
+    
+}
+
+.hamburger .cart:hover i{
+    color: var(--color);
+}
+
+.hamburger .cart:hover p{
+    color: var(--color);
+}
+
+.hamburger .cart i{
+    transition: .3s;
+}
+
+
+
+.hamburger .cart {
+    position: relative;
+    text-decoration: none;
+}
+
+    .hamburger .cart p {
+        position: relative;
+        bottom: 33px;
+        font-size: 10px;
+        left: 38px;
+        color: #7f7f7f;
+        font-weight: 400;
+        transition: .3s;
+    }
+.sidebar-header .message-count {
+    /* position: relative; */
+    position: absolute;
+    right: -8px;
+    top: 0.8px;
+    /* bottom: 0px; */
+    font-size: 10px;
+}
+
+
+    .pcmode-navbar .dropdown {
+        position: absolute;
+        right: 10rem;
+        top: 0.4rem;
+    }
+
+    .pcmode-navbar .dropdown img {
+        border-radius: 50%;
+    }
+
+
+    .pcmode-navbar .dropdown .dropdown-menu {
+        min-width: 3rem;
+    }
+
+#message{
+    position:absolute;    
+    top:1.1rem;
+}
+
+
+.pcmode-navbar .message {
+/*    position: absolute;*/
+    right: 17rem;
+    top: 0.8rem;
+    font-size: 1.2rem;
+/*    cursor: pointer;*/
+    text-decoration: none;
+    transition: .3s;
+    color: #7f7f7f;
+    height: 30px;
+}
+
+
+.pcmode-navbar .fa-bullhorn {
+    cursor: pointer;
+}
+
+
+
+    .pcmode-navbar .fa-shopping-cart {
+        /*        transition: .3s;*/
+    }
+
+    .pcmode-navbar .message:hover .fa-bullhorn{
+        color: var(--color);
+    }
+
+    .pcmode-navbar .cart:hover {
+        color: var(--color);
+    }
+
+    .pcmode-navbar .search {
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .pcmode-navbar .fa-search {
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .pcmode-navbar input {
+        width: 5rem;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        height: 1rem;
+        margin-left: 3px;
+    }
+
+    .pcmode-navbar .pc-input-search {
+
+    }
+
+    .pcmode-navbar .title h1 {
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+        /*        color: var(--color);*/
+        letter-spacing: 0.2rem;
+        margin: 0;
+        font-weight: 700;
+        text-align: center;
+/*        z-index:-1;*/
+    }
+
+        .pcmode-navbar .title h1 a {
+            color: var(--color);
+            font-size: 2rem;
+            text-decoration: none;
+        }
+
+.fakebox {
+    position: absolute;
+    right: 15.5rem;
+    width: 1rem;
+    height: 2.6rem;
+    border-right: 1px solid rgb(150, 148, 148);
+}
+
+.pcmode-navbar .about {
+    padding-right: 0.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pcmode-navbar .idea {
+    padding-right: 0.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pcmode-navbar .explore {
+    padding-right: 0.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.space-box {
+    width: 8rem;
+    cursor: default;
+    list-style: none;
+}
+
+
+.pcmode-navbar .cart {
+    position: absolute;
+    right: 20rem;
+    top: 0.85rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+    color: #7f7f7f;
+}
+
+
+    .pcmode-navbar .cart p {
+        position: absolute;
+        font-size: 3px;
+        top: 0;
+        right: -7px;
+        font-weight: 400;
+    }
+
+
+.pcmode-navbar .message p {
+    position: relative;
+    font-size: 4px;
+    bottom: 28px;
+    left: 22px;
+    font-weight: 400;
+    color: #7f7f7f;
+    cursor: pointer;
+    top:-1.3rem;
+}
+
+
+    .pcmode-navbar .message:hover p{
+        color: var(--color);
+    }
+
+
+
+
+
+/* footer */
+.footer .line {
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer .title h2 {
+    font-size: 1.2rem;
+}
+
+.footer .site-map-item a {
+    text-decoration: none;
+}
+
+    .footer .site-map-item a:hover h4 {
+        color: var(--color);
+        text-decoration: underline;
+    }
+
+.footer h4 {
+    font-size: 0.9rem;
+    color: #aaa;
+    transition: .3s;
+}
+
+.footer .copyright p {
+    font-size: 0.8rem;
+}
+
+
+.footer .social-media i {
+    color: #000;
+    font-size: 1.5rem;
+    transition: .3s;
+}
+
+    .footer .social-media i:hover {
+        color: var(--color);
+    }
